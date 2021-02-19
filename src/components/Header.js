@@ -8,9 +8,6 @@ const Header = (props) => {
 
     const [selected, setSelected] = useState(false);
 
-    const [counter, setCounter] = useState(0);
-
-
     return (
         <>
             <div className='container-fluid font fixed-top mt-4 m-0 ml-4'>
