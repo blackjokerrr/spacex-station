@@ -18,8 +18,8 @@ const SpacexInfo = () => {
 
 
     return (
-        <div>{JSON.stringify(companyInfo)}</div>
-        
+       // <div>{JSON.stringify(companyInfo)}</div>
+        <h1 class="pl-5">test</h1>
     )
 };
 
