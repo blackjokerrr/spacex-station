@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import  HomePage from "./screens/HomePage";
 import  SpacexInfo from "./data/SpacexInfo";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const routes = (

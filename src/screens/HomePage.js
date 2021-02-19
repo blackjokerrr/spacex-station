@@ -1,6 +1,13 @@
-import React  from "react";
+import React from 'react';
+import ReactFullpage from '@fullpage/react-fullpage';
 
-const HomePage = () => {
+import "../styles/styles.css";
+import "fullpage.js/vendors/scrolloverflow";
+
+import bgImage from '../images/background_5_4X.jpg';
+import Header from '../components/Header';
+
+const HomePage = () => (
 
     <ReactFullpage 
 
@@ -22,5 +29,5 @@ const HomePage = () => {
       );
     }}
   />
-}
+);
 export default HomePage;
