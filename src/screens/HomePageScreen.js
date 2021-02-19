@@ -7,7 +7,7 @@ import "fullpage.js/vendors/scrolloverflow";
 import bgImage from '../images/background_5_4X.jpg';
 import Header from '../components/Header';
 
-const HomePage = () => (
+const HomePageScreen = () => (
 
     <ReactFullpage 
 
@@ -30,4 +30,4 @@ const HomePage = () => (
     }}
   />
 );
-export default HomePage;
+export default HomePageScreen;
