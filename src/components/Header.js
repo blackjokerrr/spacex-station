@@ -1,30 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import "../styles/styles.css";
 
+
 const Header = (props) => {
 
+    const [selected, setSelected] = useState(false);
+
+    const [counter, setCounter] = useState(0);
+
+
     return (
-        <div>
-            <div class='container font fixed-top mt-4 m-0 ml-4'>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link" href="#">Features</a>
-                            <a class="nav-item nav-link" href="#">Pricing</a>
-                            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        <>
+            <div className='container-fluid font fixed-top mt-4 m-0 ml-4'>
+                <nav className="navbar navbar-expand-lg">
+                    <NavLink to = "/"><span className="font logo">SpaceX Station</span></NavLink>
+                    <div className="collapse navbar-collapse justify-content-end nav-space">
+                        <div className="navbar-nav">
+                            <div className = 'mr-5'>
+                                <NavLink to = "/"><span className = 'font nav-item'>Home</span></NavLink>
+                            </div>
+                            <div className = 'mr-5'>
+                                <NavLink to = "/rocket"><span className = 'font nav-item'>Rocket</span></NavLink>
+                            </div>
+                            <div className = 'nav-space'>
+                                <NavLink to = "/launchers"><span className = 'font nav-item'>Launchers</span></NavLink>
+                            </div>
                         </div>
                     </div>
                 </nav>
-
-
             </div>
-        </div>
+        </>
     )
 }
 

@@ -3,6 +3,22 @@
   color: #FFFAF0;
 }
 
+.nav-item {
+  font-size: 18px;
+}
+.nav-space {
+  margin-right: 8%;
+}
+
 .logo { 
-  font-size: 36px;
+  font-size: 37px;
+}
+
+a:hover {
+  color: #FFFAF0;
+}
+
+.selected {
+  text-decoration: underline;
+  color: white
 }
