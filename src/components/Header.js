@@ -19,10 +19,10 @@ const Header = (props) => {
                                 <NavLink to = "/"><span className = 'font nav-item'>Home</span></NavLink>
                             </div>
                             <div className = 'mr-5'>
-                                <NavLink to = "/rocket"><span className = 'font nav-item'>Rocket</span></NavLink>
+                                <NavLink to = "/rockets"><span className = 'font nav-item'>Rocket</span></NavLink>
                             </div>
                             <div className = 'nav-space'>
-                                <NavLink to = "/launchers"><span className = 'font nav-item'>Launchers</span></NavLink>
+                                <NavLink to = "/launches"><span className = 'font nav-item'>Launches</span></NavLink>
                             </div>
                         </div>
                     </div>
