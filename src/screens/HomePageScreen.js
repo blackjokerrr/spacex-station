@@ -25,7 +25,9 @@ const HomePageScreen = () => (
             }}>
                 <Header />
             </div>
+            
         </div>
+        
 
       );
     }}

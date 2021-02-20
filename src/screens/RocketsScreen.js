@@ -7,27 +7,20 @@ import "fullpage.js/vendors/scrolloverflow";
 
 import bgImage from '../images/background_5_4X.jpg';
 import Header from '../components/Header';
+import RocketList from "../components/Rockets/RocketList"
 
-const RocketsScreen = () => {
-    const [Rockets, setRockets] = useState({});
-
-    async function fatchData() {
-        const res = await fetch(`https://api.spacexdata.com/v3/rockets`)
-        res
-            .json()
-            .then(res => setRockets(res))
-            
-    }
-
-    useEffect(() => {
-        fatchData();
-    }, []);
-
-
+const RocketsScreen = (props) => {
     return (
-        <div>{JSON.stringify({Rockets})}</div>
-    )
-    
+        <div>
+          
+            <RocketList id="1" />
+            <RocketList id="2" />
+            <RocketList id="3" />
+            <RocketList id="4" />
+
+            </div>
+
+    );
 }
 
 
