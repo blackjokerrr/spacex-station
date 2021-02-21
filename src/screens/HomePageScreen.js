@@ -6,6 +6,8 @@ import "fullpage.js/vendors/scrolloverflow";
 
 import bgImage from '../images/background_5_4X.jpg';
 import Header from '../components/Header';
+import Body from '../components/Info/InfoBody';
+import NewHeader from '../components/newHeader';
 
 
 const HomePageScreen = () => (
@@ -13,6 +15,7 @@ const HomePageScreen = () => (
     <ReactFullpage 
 
     sectionsColor={["#282c34"]}
+    css3 = {true}
 
     render = {({ state, fullpageApi }) => {
       
@@ -23,6 +26,7 @@ const HomePageScreen = () => (
                 backgroundImage: `url(${bgImage})`, 
                 backgroundSize: '100% 100%',
             }}>
+                <Body />
                 <Header />
             </div>
             
