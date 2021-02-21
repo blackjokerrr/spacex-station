@@ -46,3 +46,30 @@ a:hover {
   bottom: 0;
   right: 65%;
 }
+.firstImg{
+  position: relative;
+  margin-top: 0%;
+  bottom: 0;
+  left: 5%;
+  right: 0;
+  width: 80em;
+  height: 75em;
+}
+.bgTest{
+  background-color: black;
+  
+}
+.textbox1{
+  margin-top: 14%;
+  margin-left: -20%;
+}
+.textbox2{
+  margin-top: 10%;
+}
+.headerText{
+  font-size: 4vw;
+}
+.text{
+  font-size: 1.2vw;
+}
+
