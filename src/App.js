@@ -6,7 +6,7 @@ import RocketDetailScreen from "./screens/RocketDetailScreen";
 import LaunchesScreen from "./screens/LaunchesScreen";
 import LaunchesDetailScreen from "./screens/LaunchesDetailScreen";
 
-import RocketList from "./components/Rockets/RocketList"
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,9 +16,8 @@ const App = () => {
       <Route path="/" exact>
         <HomePage />
       </Route>
-      <Route path="/test" exact>
-        <RocketList />
-      </Route>
+      
+  
       <Route path="/info" exact>
         <InfoScreen />
       </Route>

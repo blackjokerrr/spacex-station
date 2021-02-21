@@ -1,6 +1,6 @@
 .font {
-  font-family: 'Orbitron', sans-serif;
-  color: #FFFAF0;
+  font-family: 'Lato', sans-serif;
+  color: red;
 }
 
 .nav-item {
@@ -22,3 +22,28 @@ a:hover {
   text-decoration: underline;
   color: white
 }
+.bg-norepeat {
+  background-Size:97% 88%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: 90%;
+  object-fit: cover;
+}
+.rocketFont{
+  color: white;
+}
+.rocketPosition1{
+  position: relative;
+  left: 65%;
+  top: -10%;
+  bottom: 0;
+  right: 0;
+}
+.rocketPosition2{
+  position: relative;
+  left: 0%;
+  top: -10%;
+  bottom: 0;
+  right: 65%;
+}
+

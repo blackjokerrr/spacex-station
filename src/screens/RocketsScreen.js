@@ -7,17 +7,15 @@ import "fullpage.js/vendors/scrolloverflow";
 
 import bgImage from '../images/background_5_4X.jpg';
 import Header from '../components/Header';
-import RocketList from "../components/Rockets/RocketList"
+
+import RocketFullpageComponent from '../components/Rockets/RocketFullpageComponent';
 
 const RocketsScreen = (props) => {
     return (
         <div>
           
-            <RocketList id="1" />
-            <RocketList id="2" />
-            <RocketList id="3" />
-            <RocketList id="4" />
-
+            <RocketFullpageComponent />
+            
             </div>
 
     );

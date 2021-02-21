@@ -10,7 +10,7 @@ const Header = (props) => {
 
     return (
         <>
-            <div className='container-fluid font fixed-top mt-4 m-0 ml-4'>
+            <div className='container-fluid font fixed-top mt-3 md-5 m-0 ml-4'>
                 <nav className="navbar navbar-expand-lg">
                     <NavLink to = "/"><span className="font logo">SpaceX Station</span></NavLink>
                     <div className="collapse navbar-collapse justify-content-end nav-space">
