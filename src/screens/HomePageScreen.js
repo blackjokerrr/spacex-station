@@ -29,6 +29,9 @@ const HomePageScreen = () => (
                 <Body />
                 <Header />
             </div>
+            <div className = 'section'>
+              <h1>1</h1>
+            </div>
             
         </div>
         
