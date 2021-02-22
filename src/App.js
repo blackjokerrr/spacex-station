@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const routes = (
-    <Switch>
+    <Switch forceRefresh>
       <Route path="/" exact>
         <HomePage />
       </Route>
@@ -24,7 +24,7 @@ const App = () => {
       <Route path="/rockets" exact>
         <RocketsScreen />
       </Route>
-      <Route path="/rockets/:rocketId">
+      <Route path="/rockets/:rocketId" >
         <RocketDetailScreen />
       </Route>
       <Route path="/launches" exact>
