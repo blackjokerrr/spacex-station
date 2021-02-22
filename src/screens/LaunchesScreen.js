@@ -31,19 +31,26 @@ const LaunchesScreen = () => {
             </div> 
         </div>
 
-            <div className = 'container-fluid'>
+            <div className = 'container'>
                 <div className = 'row row-cols-2'>
-                    {console.log(launches)}
                     {launches.map(launch => {
                             return (
-                                <div className="card" style= {{width: '18em'}}>
-                                    {/*<img src="..." className="card-img-top" alt="..." />*/}
-                                    <div className="card-body">
-                                        <h4 className="card-title">{'Mission Name : ' + launch.mission_name}</h4>
-                                        <h5 className="card-text">{'Rocket : ' + launch.rocket.rocket_name}</h5>
-                                        <h5 className="card-text">{'Year : ' + launch.launch_year}</h5>
-                                        <p className="card-text">Status : {launch.launch_success ? 'Pass' : 'Failed'}</p>
-                                        <a className="btn btn-outline-success">Detail</a>
+                                <div className = 'container mb-4'>
+                                    <div className="card border border-dark">
+                                        <div className = 'container d-flex justify-content-center'>
+                                            <img src={launch.links.mission_patch_small} className="card-img-top" style = {{width: '200px', height: '200px', padding: '2%'}} />
+                                        </div>
+                                        <div className="card-body">
+                                            <h4 className="card-title">{'Mission Name "' + launch.mission_name + '"'}</h4>
+                                            <h5 className="card-text">{'Rocket is "' + launch.rocket.rocket_name + '"'}</h5>
+                                            <h5 className="card-text">{'Year : ' + launch.launch_year}</h5>
+                                            <p className="card-text">Status : {' '} 
+                                                {launch.launch_success ? 
+                                                    <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Pass</span> : 
+                                                    <span className = 'bg-danger p-1 rounded' style = {{color: 'white'}}>Failed</span>}
+                                            </p>
+                                            <a className="btn btn-outline-success">Detail</a>
+                                        </div>
                                     </div>
                                 </div>
                             )
