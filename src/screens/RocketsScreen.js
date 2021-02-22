@@ -13,8 +13,8 @@ import RocketFullpageComponent from '../components/Rockets/RocketFullpageCompone
 const RocketsScreen = (props) => {
     return (
         <div>
-          
-            <RocketFullpageComponent />
+            <Header bgstyle="bg-dark"/>
+            <RocketFullpageComponent  />
             
             </div>
 

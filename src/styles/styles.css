@@ -65,11 +65,26 @@ a:hover {
 }
 .textbox2{
   margin-top: 10%;
+  margin-bottom: 2%;
 }
 .headerText{
   font-size: 4vw;
 }
 .text{
   font-size: 1.2vw;
+}
+.secImg{
+  position: relative;
+  width: 80em;
+  height: 75em;
+  margin-top:5% ;
+}
+.navText1{
+  font-size: 5vw;
+  color: white;
+}
+.navText2{
+  font-size: 1.5vw;
+  color: white;
 }
 
