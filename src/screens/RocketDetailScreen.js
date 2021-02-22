@@ -3,7 +3,8 @@ import Header from "../components/Header"
 import { useParams } from "react-router-dom";
 import falcon1 from "../images/falcon1.png"
 import falcon9 from "../images/falcon91.png"
-
+import falconheavy from "../images/falconheavy.png"
+import starship from "../images/starship.png"
 import FadeIn from "react-fade-in";
 
 
@@ -45,11 +46,11 @@ const RocketDetailScreen = (props) => {
                                 )
                             } else if (rocketId == "falconheavy") {
                                 return (
-                                    <img src={falcon1} class="img-thumbnail firstImg border-0" />
+                                    <img src={falconheavy} class="img-thumbnail thImg border-0" />
                                 )
                             } else {
                                 return (
-                                    <img src={falcon1} class="img-thumbnail firstImg border-0" />
+                                    <img src={starship} class="img-thumbnail frtImg  border-0" />
                                 )
                             }
                         })()}

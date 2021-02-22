@@ -87,4 +87,27 @@ a:hover {
   font-size: 1.5vw;
   color: white;
 }
-
+.thImg{
+  position: relative;
+  margin-top: 0%;
+  bottom: 0;
+  left: -5%;
+  right: 0;
+  width: 83em;
+  height: 87em;
+}
+.frtImg{
+  position: relative;
+  margin-top: 4%;
+  bottom: 0;
+  left:10%;
+  right: 0;
+  width: 78em;
+  height: 78em;
+}
+.textbox3{
+  
+  margin-top: 14%;
+  margin-left: -30%;
+  
+}

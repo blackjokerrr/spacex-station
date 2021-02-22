@@ -9,7 +9,7 @@ import RocketBody from './FullpageBody';
 
 import falcon1img from "../../images/1111.jpeg";
 import falcon9img from "../../images/falcon9.png"
-import falconhavy from "../../images/falconhavy.jpeg"
+import falconhavy from "../../images/falconheavy.jpeg"
 import starship from "../../images/starship.jpg"
 import noimg from "../../images/noimg.png"
 import Infullpage from "../Rockets/Infullpage"
