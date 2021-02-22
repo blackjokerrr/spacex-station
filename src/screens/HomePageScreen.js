@@ -27,7 +27,7 @@ const HomePageScreen = () => (
                 backgroundSize: '100% 100%',
             }}>
                 <Body />
-                <Header />
+                <Header bgstyle="sss" />
             </div>
             
         </div>

@@ -15,10 +15,11 @@ const LaunchesScreen = () => {
 
     return (
         <>
-            <div style = {{backgroundColor: 'black', width: '100%', height: '6.7em'}}>
-                <Header />
-            </div>
-            <div className = 'container mt-3 input-group'>
+
+
+                <Header bgstyle="bg-dark"/>
+                <br/><br/>
+            <div className = 'container mt-5 input-group'>
             <div class="input-group mb-3 w-100">
                 <input type="text" class="form-control" placeholder="Search"  onChange = {handleSearch} value = {query} />
                 <select class="form-select ml-1" id="inputGroupSelect01">
