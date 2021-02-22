@@ -51,9 +51,9 @@ const LaunchesScreen = () => {
                                         </div>
                                         <div className="card-body">
                                             <h4 className="card-title">{'Mission Name "' + launch.mission_name + '"'}</h4>
-                                            <h5 className="card-text">{'Rocket is "'} <NavLink to = {'/rockets/' + launch.rocket.rocket_id}>{launch.rocket.rocket_name}</NavLink>{'"'}</h5>
-                                            <h5 className="card-text">{'Year : ' + launch.launch_year}</h5>
-                                            <p className="card-text">Status : {' '} 
+                                            <h5 className="card-text">{'Rocket is "'}<NavLink to = {'/rockets/' + launch.rocket.rocket_id}>{launch.rocket.rocket_name}</NavLink>{'"'}</h5>
+                                            <h5 className="card-text mt-2">{'Year : ' + launch.launch_year}</h5>
+                                            <p className="card-text mt-3">Status : {' '} 
                                                 {launch.launch_success ? 
                                                     <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Pass</span> : 
                                                     <span className = 'bg-danger p-1 rounded' style = {{color: 'white'}}>Failed</span>}
