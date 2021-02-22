@@ -22,7 +22,7 @@ const LaunchesScreen = () => {
             <div class="input-group mb-3 w-100">
                 <input type="text" class="form-control" placeholder="Search"  onChange = {handleSearch} value = {query} />
                 <select class="form-select ml-1" id="inputGroupSelect01">
-                    <option selected>Option</option>
+                    <option selected>All</option>
                     <option value="1">Name</option>
                     <option value="2">Year</option>
                     <option value="3">Success</option>
