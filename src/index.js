@@ -6,7 +6,6 @@ import Reload from './components/Reload'
 
 const App = lazy(() => import('./App'))
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback = {<Reload />}>

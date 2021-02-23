@@ -18,7 +18,6 @@ const InfoBody = (props) => {
         fatchData();
     }, []);
 
-
     return (
         <>
             <div className = 'container'>
