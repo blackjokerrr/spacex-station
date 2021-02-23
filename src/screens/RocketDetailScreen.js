@@ -65,86 +65,94 @@ const RocketDetailScreen = (props) => {
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col text-center headerText textbox2">
-                        {rocketDetail.rocket_name}
+
+                <div class="jumbotron jumbotron-fluid mt-5">
+                    <div class="row mb-5">
+                        <div class="col text-center headerText ">
+                            {rocketDetail.rocket_name}
+                        </div>
                     </div>
-                </div>
-
-                <div class="row ml-5">
-                    <div class="col-6">
-                        <div class='container w-75'>
-                            <h1> Description</h1>
+                    <div class=" mt-3 mb-5">
+                        <div class="container w-75">
+                            <h1 class=" "> Description</h1>
                             {rocketDetail.description}
-                            <center>
-                                <div class="row mt-1 container  mt-5">
-                                    <div class="col-6 ">
+                        </div>
+                    </div>
+                    <div class="row  ml-3">
+                        <div class="col-sm-6 my-center">
+                            <img src={rocketDetail.flickr_images && rocketDetail.flickr_images[0]} class="img-thumbnail w-75 mt-5 border-0 sm:block" />
+                            <img src={rocketDetail.flickr_images && rocketDetail.flickr_images[1]} class="img-thumbnail w-75 border-0 sm:block" />
+                        </div>
+
+
+
+                        <div class="col-sm-6 mt-5">
+                            <div class='container w-75'>
+
+
+                                <div class="row mt-1  mt-xl-5 mt-sm-1 ml-xl-5">
+                                    <div class="col-sm-6 ">
                                         <h2>Country</h2>
-                                        <p class="mt-4">{rocketDetail.country}</p>
+                                        <p class="mt-xl-4 mt-sm-2">{rocketDetail.country}</p>
                                     </div>
 
-                                    <div class="col-6 ">
+                                    <div class="col-sm-6 ">
                                         <h2>Company</h2>
-                                        <p class="mt-4">{rocketDetail.company}</p>
+                                        <p class="mt-xl-4 mt-sm-2">{rocketDetail.company}</p>
                                     </div>
-                                </div></center>
-                            <center>
-                                <div class="row mt-1 container  mt-5">
-                                    <div class="col-6 ">
+                                </div>
+
+                                <div class="row   mt-xl-5 mt-sm-1 ml-xl-5">
+                                    <div class="col-sm-6 ">
                                         <h2>Height</h2>
-                                        <p class="mt-4">
+                                        <p class="mt-xl-4 mt-sm-2">
                                             {rocketDetail.height && rocketDetail.height.meters}  meters
                                         </p>
                                     </div>
 
-                                    <div class="col-6  ">
+                                    <div class="col-sm-6  ">
                                         <h2>Diameter</h2>
-                                        <p class="mt-4">{rocketDetail.diameter && rocketDetail.diameter.meters} meters</p>
+                                        <p class="mt-xl-4 mt-sm-2">{rocketDetail.diameter && rocketDetail.diameter.meters} meters</p>
                                     </div>
-                                </div></center>
-                            <center>
-                                <div class="row mt-1 container  mt-5">
-                                    <div class="col-6 ">
+                                </div>
+
+                                <div class="row mt-1  mt-xl-5 mt-sm-1 ml-xl-5">
+                                    <div class="col-sm-6 ">
                                         <h2>Mass</h2>
-                                        <p class="mt-4">
+                                        <p class="mt-xl-4 mt-sm-2">
                                             {rocketDetail.mass && rocketDetail.mass.kg}  kg
                                         </p>
                                     </div>
 
-                                    <div class="col-6  ">
+                                    <div class="col-sm-6  ">
                                         <h2>Engines</h2>
-                                        <p class="mt-4">{rocketDetail.engines && rocketDetail.engines.number} engine</p>
-                                    </div>
-                                </div></center>
-
-                            <center>
-                                <div class="row mt-5">
-                                    <div class="col-12">
-                                        {rocketDetail ? (
-                                            rocketDetail?.links?.wikipedia ? (
-                                                <button href={rocketDetail?.links?.wikipedia} class="btn btn-outline-info">more in Wikipedia</button>
-                                            ) : (
-                                                    <button href={rocketDetail?.links?.wikipedia} class="btn btn-outline-info">more in Wikipedia</button>
-                                                )
-                                        ) : (
-                                                "Loading..."
-                                            )}
-
+                                        <p class="mt-xl-4 mt-sm-2">{rocketDetail.engines && rocketDetail.engines.number} engine</p>
                                     </div>
                                 </div>
-                            </center>
+
+                                <div class="row w-100">
+                                    <div class="col-12 mt-5 my-center ">
+                                        <a href={rocketDetail.wikipedia} target='_blank' class="btn btn-outline-info">more in Wikipedia</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
                         </div>
                     </div>
 
-                    <div class="col-6">
 
-                        <img src={rocketDetail.flickr_images && rocketDetail.flickr_images[0]} class="img-thumbnail w-75 mt-5 border-0 sm:block" />
-                        <img src={rocketDetail.flickr_images && rocketDetail.flickr_images[1]} class="img-thumbnail w-75 border-0 sm:block" />
-                    </div>
-                </div>
-                <div>
 
                 </div>
+
+
+
             </div>
 
         </FadeIn>

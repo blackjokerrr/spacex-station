@@ -24,7 +24,7 @@ const Header = (props) => {
                         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                             <ul class="navbar-nav ml-auto navText2">
                                 <li class="nav-item mr-5 ">
-                                    <NavLink to="/">
+                                    <NavLink to="/" exact={true}>
                                             <a class="nav-link">HOME</a>
                                     </NavLink>
                                 </li>
