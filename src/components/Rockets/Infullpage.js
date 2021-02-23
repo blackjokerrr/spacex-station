@@ -35,10 +35,10 @@ const Infullpage = (props) => {
 
     return (
 
-        <div className="section p-0 bg-norepeat"
+        <div className="section p-0"
             style={{
                 backgroundImage: `url(${coverimg})`,
-                //backgroundSize: '97% 88%',
+                backgroundSize: '100% 100%',
             }}>
            
             <FullpageBody id={props.id} rocketId={props.rocketId} />

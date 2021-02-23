@@ -16,8 +16,6 @@ const App = () => {
       <Route path="/" exact>
         <HomePage />
       </Route>
-      
-  
       <Route path="/info" exact>
         <InfoScreen />
       </Route>

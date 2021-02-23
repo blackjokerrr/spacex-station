@@ -25,10 +25,6 @@ const RocketFullpageComponent = fullpageProps => (
             return (
 
                 <div>
-
-                 
-                     
-                  
                     <Infullpage rocketId="falcon1" id="0" />
                     <Infullpage rocketId="falcon9" id="1" />
                     <Infullpage rocketId="falconheavy" id="2" />

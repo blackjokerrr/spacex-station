@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import { NavLink } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import queryString from 'query-string';
+import Reload  from '../components/Reload';
 
 import '../styles/styles.css';
 import '../styles/Launches.css';
@@ -120,7 +121,7 @@ const LaunchesScreen = () => {
 
                 <select class="form-select ml-1" id="inputGroupSelect01" name = 'success' onChange = {handleFilter} value = {filter.success}>
                     <option selected value = 'all'>All</option>
-                    <option value="true">Passed</option>
+                    <option value="true">Success</option>
                     <option value="false">Failed</option>
                 </select>
             </div> 
@@ -133,6 +134,7 @@ const LaunchesScreen = () => {
                             next={handlePage}
                             hasMore={page.hasMore}
                             scrollableTarget="scrollable"
+                            loader = {<Reload />}
                             style={{ overflow: 'hidden' }}
                         >
                             <div className = 'row row-cols-2'>

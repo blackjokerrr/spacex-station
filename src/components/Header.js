@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import "../styles/styles.css";
 
 
 const Header = (props) => {
-
-    const [selected, setSelected] = useState({
-        Home: false,
-        Rockets: false,
-        Launches: false,
-        Logo: false
-    })
-
-
 
     const classname= "navbar navbar-expand-lg navbar-dark fixed-top py-md-3 " + props.bgstyle
     
@@ -22,7 +13,9 @@ const Header = (props) => {
         <>
             <nav class={classname}>
                 <NavLink to="/">
-                <a class="navbar-brand " href="#">SPACEX STATION</a>
+                <a class="navbar-brand ml-2">
+                    <h3>SPACEX STATION</h3>
+                </a>
                 </NavLink>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,9 +24,9 @@ const Header = (props) => {
                         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                             <ul class="navbar-nav ml-auto navText2">
                                 <li class="nav-item mr-5 ">
-                                <NavLink to="/">
-                                        <a class="nav-link">HOME</a>
-                                   </NavLink>
+                                    <NavLink to="/">
+                                            <a class="nav-link">HOME</a>
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item mr-5">
                                     <NavLink to='/rockets'>
@@ -47,7 +40,6 @@ const Header = (props) => {
                                 </li>
                             </ul>
                         </div>
-                   
                 </div>
             </nav>
         </>
