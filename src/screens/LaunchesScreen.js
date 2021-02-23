@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import queryString from 'query-string';
 import Reload  from '../components/Reload';
+import FadeIn from "react-fade-in";
 
 import '../styles/styles.css';
 import '../styles/Launches.css';
@@ -106,7 +107,7 @@ const LaunchesScreen = () => {
 
 
     return (
-        <>
+        <FadeIn>
                 <Header bgstyle="bg-dark"/>
                 <br/><br/>
             <div className = 'container mt-5 input-group launches'>
@@ -172,7 +173,7 @@ const LaunchesScreen = () => {
                     </InfiniteScroll>
                 </div>
             </div>
-        </>
+        </FadeIn>
     )
 
 }

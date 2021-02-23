@@ -1,6 +1,6 @@
 import ReactFullpage from '@fullpage/react-fullpage';
 import React, { useState, useCallback, useEffect, createContext } from "react";
-
+import FadeIn from "react-fade-in";
 
 import "../styles/styles.css";
 import "fullpage.js/vendors/scrolloverflow";
@@ -12,11 +12,11 @@ import RocketFullpageComponent from '../components/Rockets/RocketFullpageCompone
 
 const RocketsScreen = (props) => {
     return (
-        <div>
+        <FadeIn>
             <Header bgstyle="sss"/>
             <RocketFullpageComponent  />
             
-            </div>
+            </FadeIn>
 
     );
 }

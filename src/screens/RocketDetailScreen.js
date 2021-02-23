@@ -29,9 +29,9 @@ const RocketDetailScreen = (props) => {
     const rocket = JSON.stringify(rocketDetail)
     return (
         <FadeIn >
-            <div>  
-                <Header bgstyle="bg-dark"/>
-            
+            <div>
+                <Header bgstyle="bg-dark" />
+
                 <div class="row">
                     <div clss="container col-3">
 
@@ -78,40 +78,40 @@ const RocketDetailScreen = (props) => {
                             {rocketDetail.description}
                             <center>
                                 <div class="row mt-1 container  mt-5">
-                                    <div class="col-6 container">
+                                    <div class="col-6 ">
                                         <h2>Country</h2>
                                         <p class="mt-4">{rocketDetail.country}</p>
                                     </div>
 
-                                    <div class="col-6 container">
+                                    <div class="col-6 ">
                                         <h2>Company</h2>
                                         <p class="mt-4">{rocketDetail.company}</p>
                                     </div>
                                 </div></center>
                             <center>
                                 <div class="row mt-1 container  mt-5">
-                                    <div class="col-6 container">
+                                    <div class="col-6 ">
                                         <h2>Height</h2>
                                         <p class="mt-4">
                                             {rocketDetail.height && rocketDetail.height.meters}  meters
                                         </p>
                                     </div>
 
-                                    <div class="col-6 container ">
+                                    <div class="col-6  ">
                                         <h2>Diameter</h2>
                                         <p class="mt-4">{rocketDetail.diameter && rocketDetail.diameter.meters} meters</p>
                                     </div>
                                 </div></center>
                             <center>
                                 <div class="row mt-1 container  mt-5">
-                                    <div class="col-6 container">
+                                    <div class="col-6 ">
                                         <h2>Mass</h2>
                                         <p class="mt-4">
                                             {rocketDetail.mass && rocketDetail.mass.kg}  kg
                                         </p>
                                     </div>
 
-                                    <div class="col-6 container ">
+                                    <div class="col-6  ">
                                         <h2>Engines</h2>
                                         <p class="mt-4">{rocketDetail.engines && rocketDetail.engines.number} engine</p>
                                     </div>
@@ -124,7 +124,7 @@ const RocketDetailScreen = (props) => {
                                             rocketDetail?.links?.wikipedia ? (
                                                 <button href={rocketDetail?.links?.wikipedia} class="btn btn-outline-info">more in Wikipedia</button>
                                             ) : (
-                                                <button href={rocketDetail?.links?.wikipedia} class="btn btn-outline-info">more in Wikipedia</button>
+                                                    <button href={rocketDetail?.links?.wikipedia} class="btn btn-outline-info">more in Wikipedia</button>
                                                 )
                                         ) : (
                                                 "Loading..."
@@ -138,8 +138,8 @@ const RocketDetailScreen = (props) => {
 
                     <div class="col-6">
 
-                        <img src={rocketDetail.flickr_images && rocketDetail.flickr_images[0]} class="img-thumbnail w-75 mt-5 border-0" />
-                        <img src={rocketDetail.flickr_images && rocketDetail.flickr_images[1]} class="img-thumbnail w-75 border-0" />
+                        <img src={rocketDetail.flickr_images && rocketDetail.flickr_images[0]} class="img-thumbnail w-75 mt-5 border-0 sm:block" />
+                        <img src={rocketDetail.flickr_images && rocketDetail.flickr_images[1]} class="img-thumbnail w-75 border-0 sm:block" />
                     </div>
                 </div>
                 <div>
