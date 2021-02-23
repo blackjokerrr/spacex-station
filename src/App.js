@@ -1,12 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import  HomePage from "./screens/HomePageScreen";
 import RocketsScreen from "./screens/RocketsScreen";
-import InfoScreen from "./screens/InfoScreen";
 import RocketDetailScreen from "./screens/RocketDetailScreen";
 import LaunchesScreen from "./screens/LaunchesScreen";
 import LaunchesDetailScreen from "./screens/LaunchesDetailScreen";
-
-
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,9 +12,6 @@ const App = () => {
     <Switch forceRefresh>
       <Route path="/" exact>
         <HomePage />
-      </Route>
-      <Route path="/info" exact>
-        <InfoScreen />
       </Route>
       <Route path="/rockets" exact>
         <RocketsScreen />

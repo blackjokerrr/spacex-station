@@ -1,22 +1,13 @@
-
-import { useParams } from "react-router-dom";
-import RocketFullpageComponent from "./RocketFullpageComponent"
-import FullpageBody from "./FullpageBody"
-import React, { useState, useCallback, useEffect, createContext } from "react";
-
-import Header from "../Header"
+import React from "react";
 
 import falcon1img from "../../images/1111.jpeg";
-import falcon9img from "../../images/falcon9.png"
+import falcon9img from "../../images/falcon9_x4.png"
 import falconhavyimg from "../../images/falconheavy.jpeg"
 import starshipimg from "../../images/starship.jpg"
 import noimg from "../../images/noimg.png"
-
+import FullpageBody from "./FullpageBody"
 
 const Infullpage = (props) => {
-
-
-
 
     var coverimg;
     if (props.id == 0) {
@@ -30,8 +21,6 @@ const Infullpage = (props) => {
     } else {
         coverimg = noimg
     };
-
-
 
     return (
 

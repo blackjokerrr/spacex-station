@@ -1,6 +1,9 @@
 .launches{
     font-family: "Courier New", monospace;
 }
+.launches-font-color{
+    color: white;
+}
 
 .head {
     font-size: 16vw;
@@ -31,10 +34,11 @@
 
 .img-bg{
     width: 60vw;
-    height: 20vw;
+    height: 27vw;
     border: 3px solid black;
 }
 
 .content-frame{
     border: 1px solid black;
 }
+

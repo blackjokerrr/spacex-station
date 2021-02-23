@@ -111,22 +111,22 @@ const LaunchesScreen = () => {
                 <Header bgstyle="bg-dark"/>
                 <br/><br/>
             <div className = 'container mt-5 input-group launches'>
-            <div class="input-group mb-3 w-100">
-                <input type="text" class="form-control" placeholder="Search by Rocket Name" name = 'name' onChange = {handleFilter} value = {filter.name} />
-                <select class="form-select ml-1" id="inputGroupSelect01" onChange = {handleFilter} value = {filter.year} name = 'year'>
-                    <option selected value = ''>Year</option>
-                    {allYear.map((year) => (
-                        <option value = {year}>{year}</option>
-                    ))}
-                </select>
+                <div class="input-group mb-3 w-100">
+                    <input type="text" class="form-control" placeholder="Search by Rocket Name" name = 'name' onChange = {handleFilter} value = {filter.name} />
+                    <select class="form-select ml-1" id="inputGroupSelect01" onChange = {handleFilter} value = {filter.year} name = 'year'>
+                        <option selected value = ''>Year</option>
+                        {allYear.map((year) => (
+                            <option value = {year}>{year}</option>
+                        ))}
+                    </select>
 
-                <select class="form-select ml-1" id="inputGroupSelect01" name = 'success' onChange = {handleFilter} value = {filter.success}>
-                    <option selected value = 'all'>All</option>
-                    <option value="true">Success</option>
-                    <option value="false">Failed</option>
-                </select>
-            </div> 
-        </div>
+                    <select class="form-select ml-1" id="inputGroupSelect01" name = 'success' onChange = {handleFilter} value = {filter.success}>
+                        <option selected value = 'all'>All</option>
+                        <option value="true">Success</option>
+                        <option value="false">Failed</option>
+                    </select>
+                </div> 
+            </div>
 
             <div className = 'container'>
                 <div id = 'scrollable' className = 'scrollbar-style' style={{ height: 'calc(100vh - 200px)', overflowX: 'hidden', overflowY: 'auto' }}>
@@ -154,16 +154,13 @@ const LaunchesScreen = () => {
                                                         <h4 className="card-title mission-head">{'Mission Name " ' + launch.mission_name + ' "'}</h4>
                                                     </div>
                                                     <p>{'Rocket is "'}<NavLink to = {'/rockets/' + launch.rocket.rocket_id}>{launch.rocket.rocket_name}</NavLink>{'" and launched in ' + launch.launch_year}</p>
-                                                    {/*<div className = 'p-4'>
-                                                        <p className="card-text mt-2">{'" ' + launch.details + ' "'}</p>
-                                                    </div>*/}
                                                     <p className="card-text mt-3">Status : {' '} 
                                                         {launch.launch_success ? 
                                                             <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Success</span> : 
                                                             <span className = 'bg-danger p-1 rounded' style = {{color: 'white'}}>Failed</span>}
                                                     </p>
                                                     <NavLink to = {'/launches/' + launch.flight_number}>
-                                                    <a className="btn btn-outline-secondary mt-3" >Details</a>
+                                                    <a className="btn btn-outline-secondary mt-3" >Detail</a>
 
                                                     </NavLink>
                                                 </div>

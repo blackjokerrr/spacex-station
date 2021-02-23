@@ -7,14 +7,12 @@ import "../styles/styles.css";
 const Header = (props) => {
 
     const classname= "navbar navbar-expand-lg navbar-dark fixed-top py-md-3 " + props.bgstyle
-    
-    console.log(props.bgstyle)
     return (
         <>
             <nav class={classname}>
                 <NavLink to="/">
                 <a class="navbar-brand ml-2">
-                    <h3>SPACEX STATION</h3>
+                    <h2>SPACEX STATION</h2>
                 </a>
                 </NavLink>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,17 +23,17 @@ const Header = (props) => {
                             <ul class="navbar-nav ml-auto navText2">
                                 <li class="nav-item mr-5 ">
                                     <NavLink to="/" exact={true}>
-                                            <a class="nav-link">HOME</a>
+                                            <a class="nav-link font-size-nav" >HOME</a>
                                     </NavLink>
                                 </li>
                                 <li class="nav-item mr-5">
                                     <NavLink to='/rockets'>
-                                        <a class="nav-link">ROCKETS</a>
+                                        <a class="nav-link font-size-nav">ROCKETS</a>
                                     </NavLink>
                                 </li>
                                 <li class="nav-item mr-5">
                                     <NavLink to="/launches">
-                                        <a class="nav-link" >LAUNCHES</a>
+                                        <a class="nav-link font-size-nav" >LAUNCHES</a>
                                     </NavLink>
                                 </li>
                             </ul>

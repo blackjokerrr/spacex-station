@@ -1,8 +1,6 @@
-import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import React, { useState, useCallback, useEffect, createContext, Button } from "react";
-import button from 'react-bootstrap'
-import rocketDetailScreen from "../../screens/RocketDetailScreen"
+import React, { useState, useEffect } from "react";
+
 
 const FullpageBody = (props) => {
 
@@ -15,17 +13,16 @@ const FullpageBody = (props) => {
   useEffect(() => {
     fatchData();
   }, []);
-  //const rocket = rocketDetail[props.id]
-  //console.log(rocket)
+
   console.log((props.id)+1)
   const id = parseInt(props.id)+1;
   if (id % 2 == 0) {
     return (
       
       <div class="container rocketPosition1">
-        <h1 class="rocketFont">{rocketDetail.rocket_name}</h1>
-        <p class="rocketFont">{rocketDetail.company}<br />
-        success rate : {rocketDetail.success_rate_pct}%<br /></p>
+        <h1 class="rocket-head rocket-font text-uppercase">{rocketDetail.rocket_name}</h1>
+        <p class="rocket-content rocket-font">{rocketDetail.company}<br />
+        Success rate : {rocketDetail.success_rate_pct}%<br /></p>
         <Link to={`/rockets/${props.rocketId}`}>
          
             <button class="btn btn-outline-light">Detail</button>
@@ -38,9 +35,9 @@ const FullpageBody = (props) => {
   else {
     return (
       <div class="container rocketPosition2">
-        <h1 class="rocketFont">{rocketDetail.rocket_name}</h1>
-        <p class="rocketFont">{rocketDetail.company}<br />
-        success rate : {rocketDetail.success_rate_pct}%<br /></p>
+        <h1 class="rocket-head rocket-font text-uppercase">{rocketDetail.rocket_name}</h1>
+        <p class="rocket-content rocket-font">{rocketDetail.company}<br />
+        Success rate : {rocketDetail.success_rate_pct}%<br /></p>
         <Link to={`/rockets/${props.rocketId}`}>
          
             <button class="btn btn-outline-light">Detail</button>

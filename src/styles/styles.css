@@ -1,5 +1,6 @@
 .font {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
 }
 
 .nav-item {
@@ -28,12 +29,28 @@ a:hover {
   background-position-y: 90%;
   object-fit: cover;
 }
-.rocketFont{
+.rocket-font{
   color: white;
+
 }
+
+.des-font-size{
+  font-size: 1vw;
+}
+.content-font-size{
+  font-size: 1vw;
+}
+
+.rocket-head{
+  font-size: 2.9vw;
+}
+.rocket-content{
+  font-size: 1.1vw
+}
+
 .rocketPosition1{
   position: relative;
-  left: 65%;
+  left: 53%;
   top: -10%;
   bottom: 0;
   right: 0;
@@ -119,12 +136,40 @@ a:hover {
 }
 
 .info-content {
-  font-size: 25px;
+  font-size: 1.1vw;
 }
 
 .info-head {
-  font-size: 28px;
+  font-size: 3.8vw;
 }
 .my-center{
   text-align: center;
+}
+
+.img-rocket-falcon1{
+  width: 83vw;
+  height: 45vw;
+}
+
+.rocket-content-header{
+  margin-top: 13vw;
+  margin-left: 7vw;
+}
+
+.img-rocket-falcon9{
+  width: 34vw;
+  height: 45vw;
+  margin-top: 4vw;
+  margin-left: 20vw;
+}
+
+.img-rocket-falconheavy{
+  width: 43vw;
+  height: 49vw;
+  margin-top: 3vw;
+  margin-left: 14vw;
+}
+
+.font-size-nav{
+  font-size: 1vw;
 }
