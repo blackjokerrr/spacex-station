@@ -1,6 +1,5 @@
 .font {
   font-family: 'Lato', sans-serif;
-  color: red;
 }
 
 .nav-item {
@@ -113,4 +112,16 @@ a:hover {
   margin-top: 14%;
   margin-left: -30%;
   
+}
+
+.logo {
+  font-size: 32px;
+}
+
+.info-content {
+  font-size: 25px;
+}
+
+.info-head {
+  font-size: 28px;
 }

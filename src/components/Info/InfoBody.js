@@ -23,12 +23,12 @@ const InfoBody = (props) => {
         <>
             <div className = 'container'>
                 <div className = 'd-flex justify-content-center'>
-                    <h3 className = 'navText1 title'>
+                    <h3 className = 'navText1 info-head'>
                         {companyInfo.name}
                     </h3>
                 </div>
                 <center>
-                <p className = 'font conten navText2 text-center w-75'>
+                <p className = 'navText2 text-center w-75 info-content'>
                     {companyInfo.summary}
                 </p>
                 </center>
