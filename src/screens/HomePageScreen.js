@@ -7,7 +7,6 @@ import "fullpage.js/vendors/scrolloverflow";
 import bgImage from '../images/background_5_4X.jpg';
 import Header from '../components/Header';
 import Body from '../components/Info/InfoBody';
-import NewHeader from '../components/newHeader';
 import FadeIn from "react-fade-in";
 
 

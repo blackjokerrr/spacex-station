@@ -80,7 +80,7 @@ const LaunchesScreen = () => {
 
             controlRef.current = control
 
-            try {
+            try{
                 const response = await fetch(`https://api.spacexdata.com/v3/launches?${filterParams}`, {
                   signal: controlRef.current?.signal,
                 })
@@ -95,7 +95,7 @@ const LaunchesScreen = () => {
                   }
                 }
                 controlRef.current = null
-              } catch (err) {
+              }catch (err) {
                 console.error(err)
             }
         }
@@ -129,7 +129,7 @@ const LaunchesScreen = () => {
         </div>
 
             <div className = 'container'>
-                <div id = 'scrollable' style={{ height: 'calc(100vh - 200px)', overflowX: 'hidden', overflowY: 'auto' }}>
+                <div id = 'scrollable' className = 'scrollbar-style' style={{ height: 'calc(100vh - 200px)', overflowX: 'hidden', overflowY: 'auto' }}>
                         <InfiniteScroll
                             dataLength={launches.length}
                             next={handlePage}
@@ -138,7 +138,7 @@ const LaunchesScreen = () => {
                             loader = {<Reload />}
                             style={{ overflow: 'hidden' }}
                         >
-                            <div className = 'row row-cols-2'>
+                            <div className = 'row row-cols-2 mr-1'>
                                 {launches.map((launch) => (
                                     <>
                                         <div className = 'container mb-4 launches'>
@@ -151,19 +151,21 @@ const LaunchesScreen = () => {
                                                 </div>
                                                 <div className="card-body">
                                                     <div className = 'd-flex justify-content-center'>
-                                                        <h4 className="card-title ">{'Mission Name " ' + launch.mission_name + ' "'}</h4>
+                                                        <h4 className="card-title mission-head">{'Mission Name " ' + launch.mission_name + ' "'}</h4>
                                                     </div>
                                                     <p>{'Rocket is "'}<NavLink to = {'/rockets/' + launch.rocket.rocket_id}>{launch.rocket.rocket_name}</NavLink>{'" and launched in ' + launch.launch_year}</p>
-                                                    <div className = 'p-4'>
+                                                    {/*<div className = 'p-4'>
                                                         <p className="card-text mt-2">{'" ' + launch.details + ' "'}</p>
-                                                    </div>
+                                                    </div>*/}
                                                     <p className="card-text mt-3">Status : {' '} 
                                                         {launch.launch_success ? 
                                                             <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Success</span> : 
                                                             <span className = 'bg-danger p-1 rounded' style = {{color: 'white'}}>Failed</span>}
                                                     </p>
-                                                    <a className="btn btn-outline-secondary" href = {launch.links.video_link} target = '_blank'>Youtube</a>
-                                                    <a className="btn btn-outline-secondary ml-2" href = {launch.links.wikipedia} target = '_blank'>Wiki</a>
+                                                    <NavLink to = {'/launches/' + launch.flight_number}>
+                                                    <a className="btn btn-outline-secondary mt-3" >Details</a>
+
+                                                    </NavLink>
                                                 </div>
                                             </div>
                                         </div>
