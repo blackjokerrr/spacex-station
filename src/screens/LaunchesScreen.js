@@ -109,7 +109,7 @@ const LaunchesScreen = () => {
                 <br/><br/>
             <div className = 'container mt-5 input-group'>
             <div class="input-group mb-3 w-100">
-                <input type="text" class="form-control" placeholder="Search" name = 'name' onChange = {handleFilter} value = {filter.name} />
+                <input type="text" class="form-control" placeholder="Search by Rocket Name" name = 'name' onChange = {handleFilter} value = {filter.name} />
                 <select class="form-select ml-1" id="inputGroupSelect01" onChange = {handleFilter} value = {filter.year} name = 'year'>
                     <option selected value = ''>Year</option>
                     {allYear.map((year) => (
@@ -144,14 +144,14 @@ const LaunchesScreen = () => {
                                                 </div>
                                                 <div className="card-body">
                                                     <h4 className="card-title">{'" ' + launch.mission_name + ' " used a rocket is '}<NavLink to = {'/rockets/' + launch.rocket.rocket_id}>{launch.rocket.rocket_name}</NavLink></h4>
-                                                    <p className="card-text mt-2">{'In year ' + launch.launch_year + ' and The details are ' + launch.details}</p>
+                                                    <p className="card-text mt-2">{'A rocket was launched in year ' + launch.launch_year + ' and The details are ' + launch.details}</p>
                                                     <p className="card-text mt-3">Status : {' '} 
                                                         {launch.launch_success ? 
-                                                            <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Passed</span> : 
+                                                            <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Success</span> : 
                                                             <span className = 'bg-danger p-1 rounded' style = {{color: 'white'}}>Failed</span>}
                                                     </p>
-                                                    <a className="btn btn-outline-success" href = {launch.links.video_link} target = '_blank'>Youtube</a>
-                                                    <a className="btn btn-outline-success ml-2" href = {launch.links.wikipedia} target = '_blank'>Wiki</a>
+                                                    <a className="btn btn-outline-secondary" href = {launch.links.video_link} target = '_blank'>Youtube</a>
+                                                    <a className="btn btn-outline-secondary ml-2" href = {launch.links.wikipedia} target = '_blank'>Wiki</a>
                                                 </div>
                                             </div>
                                         </div>
