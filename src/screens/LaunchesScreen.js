@@ -5,6 +5,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import queryString from 'query-string';
 
 import '../styles/styles.css';
+import '../styles/Launches.css';
 
 const initialState = {
     filter: {
@@ -107,7 +108,7 @@ const LaunchesScreen = () => {
         <>
                 <Header bgstyle="bg-dark"/>
                 <br/><br/>
-            <div className = 'container mt-5 input-group'>
+            <div className = 'container mt-5 input-group launches'>
             <div class="input-group mb-3 w-100">
                 <input type="text" class="form-control" placeholder="Search by Rocket Name" name = 'name' onChange = {handleFilter} value = {filter.name} />
                 <select class="form-select ml-1" id="inputGroupSelect01" onChange = {handleFilter} value = {filter.year} name = 'year'>
@@ -137,14 +138,22 @@ const LaunchesScreen = () => {
                             <div className = 'row row-cols-2'>
                                 {launches.map((launch) => (
                                     <>
-                                        <div className = 'container mb-4'>
+                                        <div className = 'container mb-4 launches'>
                                             <div className="card border border-dark" key = {launch._id}>
+                                                <div className = 'd-flex justify-content-center mt-3'>
+                                                    <p className = 'fw-light'>Launches</p>
+                                                </div>
                                                 <div className = 'container d-flex justify-content-center'>
                                                     <img src={launch.links.mission_patch_small} className="card-img-top" style = {{width: '200px', height: '200px', padding: '2%'}} />
                                                 </div>
                                                 <div className="card-body">
-                                                    <h4 className="card-title">{'" ' + launch.mission_name + ' " used a rocket is '}<NavLink to = {'/rockets/' + launch.rocket.rocket_id}>{launch.rocket.rocket_name}</NavLink></h4>
-                                                    <p className="card-text mt-2">{'A rocket was launched in year ' + launch.launch_year + ' and The details are ' + launch.details}</p>
+                                                    <div className = 'd-flex justify-content-center'>
+                                                        <h4 className="card-title ">{'Mission Name " ' + launch.mission_name + ' "'}</h4>
+                                                    </div>
+                                                    <p>{'Rocket is "'}<NavLink to = {'/rockets/' + launch.rocket.rocket_id}>{launch.rocket.rocket_name}</NavLink>{'" and launched in ' + launch.launch_year}</p>
+                                                    <div className = 'p-4'>
+                                                        <p className="card-text mt-2">{'" ' + launch.details + ' "'}</p>
+                                                    </div>
                                                     <p className="card-text mt-3">Status : {' '} 
                                                         {launch.launch_success ? 
                                                             <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Success</span> : 
