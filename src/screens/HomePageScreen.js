@@ -8,6 +8,7 @@ import bgImage from '../images/background_5_4X.jpg';
 import Header from '../components/Header';
 import Body from '../components/Info/InfoBody';
 import NewHeader from '../components/newHeader';
+import FadeIn from "react-fade-in";
 
 
 const HomePageScreen = () => (
@@ -20,7 +21,7 @@ const HomePageScreen = () => (
     render = {({ state, fullpageApi }) => {
       
       return (
-        <div>
+        <FadeIn>
             <div className = "section p-0" 
                 style = {{
                 backgroundImage: `url(${bgImage})`, 
@@ -30,7 +31,7 @@ const HomePageScreen = () => (
                 <Header bgstyle="sss" />
             </div>
             
-        </div>
+        </FadeIn>
         
 
       );
