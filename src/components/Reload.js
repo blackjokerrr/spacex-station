@@ -6,7 +6,7 @@ const Reload = () => {
     return(
         <div className = 'd-flex justify-content-center'>
             <div class="spinner-border text-secondary" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only"></span>
             </div>
         </div>
     )
