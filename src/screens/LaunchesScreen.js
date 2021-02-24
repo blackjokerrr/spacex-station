@@ -65,13 +65,13 @@ const LaunchesScreen = () => {
           id: true,
           launch_year: filter.year,
           rocket_name: filter.name,
-          launch_success: filter.success === 'all' ? '' : filter.success,
+          launch_success: filter.success == 'all' ? '' : filter.success,
           limit: page.allPage,
           offset: (page.current - 1) * page.allPage,
         }, { skipEmptyString: true }),
         [filter.success, filter.year, filter.name, page],
     )
-    
+
     useEffect(() => {
         const fetchLaunches = async () => {
 
@@ -95,6 +95,16 @@ const LaunchesScreen = () => {
     },
         [filterParams, page.allPage],
     )
+
+    const statusLaunch = (launch) => {
+        if (launch.launch_success == null)
+            return <span className = 'bg-secondary p-1 rounded' style = {{color: 'white'}}>NO DATA</span>
+        else if(launch.launch_success)
+            return <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Success</span>
+        else
+            return <span className = 'bg-danger p-1 rounded' style = {{color: 'white'}}>Failed</span>
+    }
+
     
 
 
@@ -147,9 +157,7 @@ const LaunchesScreen = () => {
                                                     </div>
                                                     <p>{'Rocket is "'}<NavLink to = {'/rockets/' + (launch.rocket && launch.rocket.rocket_id)}>{launch.rocket && launch.rocket.rocket_name}</NavLink>{'" and launched in ' + launch.launch_year}</p>
                                                     <p className="card-text mt-3">Status : {' '} 
-                                                        {launch.launch_success ? 
-                                                            <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Success</span> : 
-                                                            <span className = 'bg-danger p-1 rounded' style = {{color: 'white'}}>Failed</span>}
+                                                        { statusLaunch(launch) }
                                                     </p>
                                                     <NavLink to = {'/launches/' + launch.flight_number}>
                                                     <a className="btn btn-outline-secondary mt-3" >Detail</a>
