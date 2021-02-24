@@ -22,6 +22,16 @@ const LaunchesDetailScreen = () => {
         fatchData();
     }, []);
 
+
+    const statusLaunch = () => {
+        if (launchesDetail.launch_success == null)
+            return 'NO DATA'
+        else if (launchesDetail.launch_success)
+            return 'Success'
+        else
+            return 'Failed'
+    }
+
     return (
         <>
             <Header bgstyle="bg-dark" />
@@ -65,7 +75,9 @@ const LaunchesDetailScreen = () => {
                                                     <h3 className = 'display-5'>STATUS</h3>
                                                 </div>
                                                 <div className = 'p-3'>
-                                                    <p>{'" ' + ((launchesDetail && launchesDetail.launch_success) ? 'Success':'Failed') + ' "'}</p>
+                                                    <p>{'" ' }{
+                                                        statusLaunch()
+                                                    }{' "'}</p>
                                                 </div>
                                             </div>
                                             <div>
@@ -93,8 +105,6 @@ const LaunchesDetailScreen = () => {
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </>
     )
