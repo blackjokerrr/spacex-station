@@ -16,7 +16,7 @@ const initialState = {
         success: 'all'
     },
     page: {
-        allPage: 12,
+        allPage: 10,
         current: 1,
         hasMore: true
     }
@@ -27,7 +27,6 @@ const LaunchesScreen = () => {
     const [filter, setFilter] = useState(initialState.filter)
     const [page, setPage] = useState(initialState.page)
     const [launches, setLaunches] = useState([])
-    const controlRef = useRef()
     const allYear = []
     
     var genNumber = () => {
@@ -48,7 +47,9 @@ const LaunchesScreen = () => {
             setPage(initialState.page)
             setLaunches([])
 
+
         }, [],
+
 
     )
 
@@ -73,17 +74,9 @@ const LaunchesScreen = () => {
     
     useEffect(() => {
         const fetchLaunches = async () => {
-            if (controlRef.current){
-                controlRef.current.abort()
-            }
-            const control = new AbortController()
-
-            controlRef.current = control
 
             try{
-                const response = await fetch(`https://api.spacexdata.com/v3/launches?${filterParams}`, {
-                  signal: controlRef.current?.signal,
-                })
+                const response = await fetch(`https://api.spacexdata.com/v3/launches?${filterParams}`,)
 
                 if (response.status !== 200) {
                   console.error(new Error(`API Error: status code ${response.status}`))
@@ -94,7 +87,6 @@ const LaunchesScreen = () => {
                     setPage((prev) => ({ ...prev, hasMore: false }))
                   }
                 }
-                controlRef.current = null
               }catch (err) {
                 console.error(err)
             }
@@ -147,13 +139,13 @@ const LaunchesScreen = () => {
                                                     <p className = 'fw-light'>Launches</p>
                                                 </div>
                                                 <div className = 'container d-flex justify-content-center'>
-                                                    <img src={launch.links.mission_patch_small} className="card-img-top" style = {{width: '200px', height: '200px', padding: '2%'}} />
+                                                    <img src={launch.links && launch.links.mission_patch_small} className="card-img-top" style = {{width: '200px', height: '200px', padding: '2%'}} />
                                                 </div>
                                                 <div className="card-body">
                                                     <div className = 'd-flex justify-content-center'>
                                                         <h4 className="card-title mission-head">{'Mission Name " ' + launch.mission_name + ' "'}</h4>
                                                     </div>
-                                                    <p>{'Rocket is "'}<NavLink to = {'/rockets/' + launch.rocket.rocket_id}>{launch.rocket.rocket_name}</NavLink>{'" and launched in ' + launch.launch_year}</p>
+                                                    <p>{'Rocket is "'}<NavLink to = {'/rockets/' + (launch.rocket && launch.rocket.rocket_id)}>{launch.rocket && launch.rocket.rocket_name}</NavLink>{'" and launched in ' + launch.launch_year}</p>
                                                     <p className="card-text mt-3">Status : {' '} 
                                                         {launch.launch_success ? 
                                                             <span className = 'bg-success p-1 rounded' style = {{color: 'white'}}>Success</span> : 
