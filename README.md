@@ -2,7 +2,7 @@
 - [https://spacex-station.herokuapp.com/](https://spacex-station.herokuapp.com/)
 
 
-# Credit
+# Library ที่ใช้ใน Project
 - [FullPage.js](https://alvarotrigo.com/fullPage/)
 - [Bootstrap](https://getbootstrap.com/)
 - [SpaceX API](https://docs.spacexdata.com/)
