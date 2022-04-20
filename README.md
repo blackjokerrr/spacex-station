@@ -1,5 +1,5 @@
 # SPACEX
-- fetch data from api SpaceX
+- Fetch data from api SpaceX
 
 # Website
 - [https://spacex-station.herokuapp.com/](https://spacex-station.herokuapp.com/)
